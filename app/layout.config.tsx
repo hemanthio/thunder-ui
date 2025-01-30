@@ -1,5 +1,6 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 
+
 /**
  * Shared layout configurations
  *
@@ -10,7 +11,21 @@ import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 export const baseOptions: BaseLayoutProps = {
   nav: {
     // can be JSX too!
-    title: 'My App',
+    title: (
+      <div style={{ display: 'flex',gap:"3px", alignItems: 'center' }}>
+         <div
+          style={{
+            width: 20,
+            height: 20,
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, #D37CF0, #583ECA)',
+            marginLeft: 8,
+          }}
+        />
+        ThunderUI
+       
+      </div>
+    ),
   },
   links: [
     {
