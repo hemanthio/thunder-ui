@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "../lib/utils";
+
 import { RefreshCw } from "lucide-react";
 import { useState } from "react";
 
@@ -11,7 +11,7 @@ interface PreviewContainerProps {
 
 export const PreviewContainer = ({
   children,
-  className,
+  
 }: PreviewContainerProps) => {
   const [key, setKey] = useState(0);
 
@@ -30,10 +30,8 @@ export const PreviewContainer = ({
       </button>
       <div
         key={key}
-        className={cn(
-          "dark:bg-background  min-h-[15rem] p-4 rounded-xl flex items-center justify-center not-prose overflow-hidden relative",
-          className,
-        )}
+        className=
+          "dark:bg-background  min-h-[15rem] p-4 rounded-xl flex items-center justify-center not-prose overflow-hidden relative"
       >
         {children}
       </div>
