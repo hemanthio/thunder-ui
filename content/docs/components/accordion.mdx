@@ -1,0 +1,67 @@
+---
+title: accordion
+description: Your first document
+---
+
+import JobCard from '/components/JobCard.tsx'
+import {PreviewContainer} from "/components/PreviewContainer.tsx"
+
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+import { Callout } from "fumadocs-ui/components/callout";
+
+
+
+
+<Tabs items={["Preview", "Code"]}>
+<Tab value="Preview">
+    <PreviewContainer>
+      <JobCard />
+    </PreviewContainer>
+  </Tab>
+
+   <Tab value="Code"> 
+   ```tsx
+'use client'
+
+// components/CodeBlock.tsx
+import React, { useEffect, useState } from 'react';
+import { highlightCode } from '../utils/shiki';
+
+interface CodeBlockProps {
+  code: string;
+  language?: string;
+}
+
+const CodeBlock: React.FC<CodeBlockProps> = ({ code, language = 'tsx' }) => {
+  const [highlightedCode, setHighlightedCode] = useState<string>('');
+
+  useEffect(() => {
+    highlightCode(code, language).then(setHighlightedCode);
+  }, [code, language]);
+
+  return (
+    <div
+      className="shiki-code-block"
+      style={{
+        backgroundColor: '#1e1e1e',
+        color: '#d4d4d4',
+        padding: '16px',
+        borderRadius: '8px',
+        overflowX: 'auto',
+        marginTop: '16px',
+        width: '100%',
+        maxWidth: 'none',
+      }}
+      dangerouslySetInnerHTML={{ __html: highlightedCode }}
+    />
+  );
+};
+
+export default CodeBlock; 
+```
+   </Tab >
+</Tabs>
+
+
+
+## hemanth
