@@ -1,16 +1,21 @@
 ---
-title: button
-description: Your first document
+title: Button
+description: Ideal for form submissions, navigation, modals, and triggering interactive actions
 ---
 
 import Button from '/components/button/Button.tsx'
 import {PreviewContainer} from "/components/PreviewContainer.tsx"
 
+### installation 
+
+```tsx
+npm i lucide-react 
+```
+
+## 1. Button-Arrow
+
 import { Tab, Tabs } from "fumadocs-ui/components/tabs";
 import { Callout } from "fumadocs-ui/components/callout";
-
-
-
 
 <Tabs items={["Preview", "Code"]}>
 <Tab value="Preview">
@@ -21,47 +26,27 @@ import { Callout } from "fumadocs-ui/components/callout";
 
    <Tab value="Code"> 
    ```tsx
-'use client'
+import { MoveRight } from 'lucide-react';
 
-// components/CodeBlock.tsx
-import React, { useEffect, useState } from 'react';
-import { highlightCode } from '../utils/shiki';
+const Button = () => {
 
-interface CodeBlockProps {
-  code: string;
-  language?: string;
-}
-
-const CodeBlock: React.FC<CodeBlockProps> = ({ code, language = 'tsx' }) => {
-  const [highlightedCode, setHighlightedCode] = useState<string>('');
-
-  useEffect(() => {
-    highlightCode(code, language).then(setHighlightedCode);
-  }, [code, language]);
 
   return (
     <div
-      className="shiki-code-block"
-      style={{
-        backgroundColor: '#1e1e1e',
-        color: '#d4d4d4',
-        padding: '16px',
-        borderRadius: '8px',
-        overflowX: 'auto',
-        marginTop: '16px',
-        width: '100%',
-        maxWidth: 'none',
-      }}
-      dangerouslySetInnerHTML={{ __html: highlightedCode }}
-    />
+      className='flex gap-2 cursor-pointer text-white items-center py-2 pr-2 pl-4 bg-[#F15024] rounded-full' >
+      <h1 className='text-base font-medium'>Register Now</h1>
+      <div className='p-2 rounded-full bg-white '>
+          <MoveRight color='#F15024' />
+      </div>
+    </div>
   );
 };
 
-export default CodeBlock; 
+export default Button; 
 ```
    </Tab >
 </Tabs>
 
 
 
-## hemanth
+
