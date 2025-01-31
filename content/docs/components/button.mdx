@@ -1,10 +1,13 @@
 ---
 title: Button
-description: Ideal for form submissions, navigation, modals, and triggering interactive actions
+description: Ideal for Call to Action (CTA), form submissions, navigation, modals, and triggering interactive actions
 ---
 
 import Button from '/components/button/Button.tsx'
+import Button2 from '/components/button/Button2.tsx'
 import {PreviewContainer} from "/components/PreviewContainer.tsx"
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+import { Callout } from "fumadocs-ui/components/callout";
 
 ### installation 
 
@@ -12,10 +15,7 @@ import {PreviewContainer} from "/components/PreviewContainer.tsx"
 npm i lucide-react 
 ```
 
-## 1. Button-Arrow
-
-import { Tab, Tabs } from "fumadocs-ui/components/tabs";
-import { Callout } from "fumadocs-ui/components/callout";
+## 1. ArrowButton
 
 <Tabs items={["Preview", "Code"]}>
 <Tab value="Preview">
@@ -46,6 +46,41 @@ export default Button;
 ```
    </Tab >
 </Tabs>
+
+## 2. CTA Button
+
+<Tabs items={["Preview", "Code"]}>
+<Tab value="Preview">
+    <PreviewContainer>
+      <Button2 />
+    </PreviewContainer>
+  </Tab>
+
+   <Tab value="Code"> 
+   ```tsx
+import { MoveRight } from 'lucide-react';
+
+const Button = () => {
+
+
+  return (
+    <div
+      className='flex gap-2 cursor-pointer text-white items-center py-2 pr-2 pl-4 bg-[#F15024] rounded-full' >
+      <h1 className='text-base font-medium'>Register Now</h1>
+      <div className='p-2 rounded-full bg-white '>
+          <MoveRight color='#F15024' />
+      </div>
+    </div>
+  );
+};
+
+export default Button; 
+```
+   </Tab >
+</Tabs>
+
+
+
 
 
 
