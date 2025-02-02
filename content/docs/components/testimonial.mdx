@@ -1,26 +1,19 @@
 ---
-title: Button
+title: Testimonials
 description: Ideal for Call to Action (CTA), form submissions, navigation, modals, and triggering interactive actions
 ---
+import Variant1 from '/components/testimonial/variant1.tsx'
 
-import Button from '/components/button/Button.tsx'
-import Button2 from '/components/button/Button2.tsx'
 import {PreviewContainer} from "/components/PreviewContainer.tsx"
 import { Tab, Tabs } from "fumadocs-ui/components/tabs";
 import { Callout } from "fumadocs-ui/components/callout";
-
-## Installation 
-
-```tsx
-npm i lucide-react motion
-```
 
 ## Variant-1
 
 <Tabs items={["Preview", "Code"]}>
 <Tab value="Preview">
     <PreviewContainer>
-      <Button />
+      <Variant1 />
     </PreviewContainer>
   </Tab>
 
@@ -73,53 +66,3 @@ export default Button;
 ```
    </Tab >
 </Tabs>
-
-## Variant-2
-
-<Tabs items={["Preview", "Code"]}>
-<Tab value="Preview">
-    <PreviewContainer>
-      <Button2 />
-    </PreviewContainer>
-  </Tab>
-
-   <Tab value="Code"> 
-   ```tsx
-'use client'
-import { useState } from 'react';
-
-const Button = () => {
-  const [hover, setHover] = useState(false);
-
-  return (
-    <div
-      className='relative flex items-center justify-center'
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
-      <div 
-        className={`relative z-10 flex cursor-pointer text-black dark:text-white bg-white dark:bg-black items-center py-3 px-4 rounded-full ${hover ? 'translate-y-[-7px]' : ''} transition-transform duration-300`}
-      >
-        <h1 className='text-base font-medium'>Book Demo</h1>
-      </div>
-      
-      {hover && (
-        <div 
-          className='absolute inset-0 bg-black dark:bg-white rounded-full top-2 opacity-100 transition-all duration-300'
-        ></div>
-      )}
-    </div>
-  );
-};
-
-export default Button;
-```
-   </Tab >
-</Tabs>
-
-
-
-
-
-
-
