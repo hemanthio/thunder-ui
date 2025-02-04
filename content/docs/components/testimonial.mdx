@@ -1,8 +1,9 @@
 ---
 title: Testimonials
-description: Ideal for Call to Action (CTA), form submissions, navigation, modals, and triggering interactive actions
+description: The Testimonials component showcases user feedback, reviews, or success stories to build credibility and trust. It’s often used in landing pages, product pages, and marketing sections to highlight customer satisfaction.
 ---
 import Variant1 from '/components/testimonial/variant1.tsx'
+import Variant2 from '/components/testimonial/variant2.tsx'
 
 import {PreviewContainer} from "/components/PreviewContainer.tsx"
 import { Tab, Tabs } from "fumadocs-ui/components/tabs";
@@ -14,6 +15,66 @@ import { Callout } from "fumadocs-ui/components/callout";
 <Tab value="Preview">
     <PreviewContainer>
       <Variant1 />
+    </PreviewContainer>
+  </Tab>
+
+   <Tab value="Code"> 
+   ```tsx
+
+'use client'
+import { MoveRight } from 'lucide-react';
+import { motion, AnimatePresence } from "motion/react";
+import { useState } from 'react';
+
+const Button = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div
+      className='flex gap-2 cursor-pointer text-white items-center py-2 pr-2 pl-4 bg-[#F15024] rounded-full'
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <h1 className='text-base font-medium'>Register Now</h1>
+      <div className='p-2 rounded-full flex bg-white overflow-hidden relative '>
+        <AnimatePresence mode="popLayout">
+          {!isHovered ? (
+            <motion.div
+              key="first"
+              initial={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 31 }}
+              transition={{ duration: 0.3 }}
+            >
+              <MoveRight color='#F15024' />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="second"
+              initial={{ opacity: 0, x: -31 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <MoveRight color='#F15024' />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </div>
+  );
+};
+
+export default Button; 
+```
+   </Tab >
+</Tabs>
+
+
+## Variant-2
+
+<Tabs items={["Preview", "Code"]}>
+<Tab value="Preview">
+    <PreviewContainer>
+      <Variant2 />
     </PreviewContainer>
   </Tab>
 
