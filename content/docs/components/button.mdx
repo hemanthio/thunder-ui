@@ -5,6 +5,8 @@ description: Ideal for Call to Action (CTA), form submissions, navigation, modal
 
 import Button from '/components/button/Button.tsx'
 import Button2 from '/components/button/Button2.tsx'
+import Button3 from '/components/button/Button3.tsx'
+
 import {PreviewContainer} from "/components/PreviewContainer.tsx"
 import { Tab, Tabs } from "fumadocs-ui/components/tabs";
 import { Callout } from "fumadocs-ui/components/callout";
@@ -117,6 +119,33 @@ export default Button;
    </Tab >
 </Tabs>
 
+## Variant-3
+
+<Tabs items={["Preview", "Code"]}>
+<Tab value="Preview">
+    <PreviewContainer>
+      <Button3 />
+    </PreviewContainer>
+  </Tab>
+
+   <Tab value="Code"> 
+   ```tsx
+
+
+
+
+Request the code on x: aryawebly 
+
+
+
+
+
+
+
+
+```
+   </Tab >
+</Tabs>
 
 
 
