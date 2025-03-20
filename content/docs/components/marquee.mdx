@@ -1,0 +1,38 @@
+---
+title: Marquee
+---
+
+import Marquee from '/components/marquee/Marquee.tsx'
+import {PreviewContainer} from "/components/PreviewContainer.tsx"
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+import { Callout } from "fumadocs-ui/components/callout";
+
+
+## Variant-1
+
+<Tabs items={["Preview", "Code"]}>
+<Tab value="Preview">
+    <PreviewContainer>
+      <Marquee />
+    </PreviewContainer>
+  </Tab>
+
+   <Tab value="Code"> 
+   ```tsx
+
+
+
+
+Request the code on x: aryawebly 
+
+
+
+
+
+
+
+
+
+```
+   </Tab >
+</Tabs>
