@@ -1,0 +1,39 @@
+---
+title: Pricing Card
+---
+
+import Pricing from '/components/pricing/Pricing.tsx'
+
+
+import {PreviewContainer} from "/components/PreviewContainer.tsx"
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+import { Callout } from "fumadocs-ui/components/callout";
+
+
+<Tabs items={["Preview", "Code"]}>
+<Tab value="Preview">
+    <PreviewContainer>
+      <Pricing />
+    </PreviewContainer>
+  </Tab>
+
+   <Tab value="Code"> 
+   ```tsx
+
+
+
+
+
+Request the code on x: aryawebly 
+
+
+
+
+
+
+
+
+
+```
+   </Tab >
+</Tabs>

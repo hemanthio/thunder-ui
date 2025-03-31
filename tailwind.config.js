@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class", 
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,6 +8,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+     
       animation: {
         'marquee': 'marquee 25s linear infinite',
         'marquee2': 'marquee2 25s linear infinite',
