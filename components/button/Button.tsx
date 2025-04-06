@@ -8,6 +8,7 @@ const Button = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
+    <div className='flex'>
     <div
       className='flex gap-2 cursor-pointer text-white items-center py-2 pr-2 pl-4 bg-[#F15024] rounded-full'
       onMouseEnter={() => setIsHovered(true)}
@@ -37,6 +38,7 @@ const Button = () => {
           )}
         </AnimatePresence>
       </div>
+    </div>
     </div>
   );
 };
