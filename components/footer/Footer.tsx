@@ -17,7 +17,7 @@ export default function ContactSection() {
       {/* Center content vertically */}
       <div className="flex-grow flex items-center [perspective::1000px] [transform-style:preserve-3d] justify-center w-full">
         {/* Gradient Button with increased scale */}
-        <div className="relative scale-150">
+        <div className="relative scale-150 max-md:scale-110">
           <motion.div 
             whileHover={{
               scale: 1.05,
@@ -62,7 +62,7 @@ export default function ContactSection() {
       </div>
 
       {/* Email and Social Icons Container positioned at bottom */}
-      <div className="flex items-center justify-between w-full max-w-4xl bg-gray-100 rounded-2xl px-6 py-4 mb-6">
+      <div className="flex items-center max-md:flex-col max-md:gap-4 justify-between w-full max-w-4xl bg-gray-100 rounded-2xl px-6 py-4 mb-6">
         {/* Email with Icon */}
         <div className="flex items-center space-x-3">
           <svg viewBox="0 0 24 24" className="w-6 h-6  rotate-45" fill="none" stroke="currentColor">
@@ -70,6 +70,9 @@ export default function ContactSection() {
           </svg>
           <span className="text-black/90 text-lg font-medium">aryawebwork@gmail.com</span>
         </div>
+
+        {/* Divider line visible only on mobile */}
+        <div className="hidden max-md:block w-full h-[1px] bg-gray-300"></div>
 
         {/* Social Media Icons */}
         <div className="flex items-center space-x-4">
